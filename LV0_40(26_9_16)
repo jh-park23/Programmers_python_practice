@@ -1,0 +1,14 @@
+def solution(num_list):
+    muti = 1
+    sum_list = 0
+    for i in range(len(num_list)):
+        muti *= num_list[i]
+    for i in range(len(num_list)):
+        sum_list += num_list[i]
+    sum_list = sum_list**2
+    
+    if muti < sum_list:
+        answer = 1
+    elif muti > sum_list:
+        answer = 0
+    return answer

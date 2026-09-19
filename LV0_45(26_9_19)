@@ -1,0 +1,10 @@
+def solution(arr, queries):
+    answer = []
+    for n in range(len(queries)):
+        idx_i = queries[n][0]
+        idx_j = queries[n][1]
+        arr_temp = arr[idx_j]
+        arr[idx_j] = arr[idx_i]
+        arr[idx_i] = arr_temp
+    answer = arr
+    return answer

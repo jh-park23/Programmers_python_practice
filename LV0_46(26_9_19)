@@ -1,0 +1,14 @@
+def solution(arr, queries):
+    answer = []
+    for n in range(len(queries)):
+        s = queries[n][0]
+        e = queries[n][1]
+        small = -1
+        for i in range(s,e+1):
+            if(queries[n][2]<arr[i]):
+                if(small == -1):
+                    small = arr[i]
+                elif(small != -1 and small > arr[i]):
+                    small = arr[i]
+        answer.append(small)
+    return answer

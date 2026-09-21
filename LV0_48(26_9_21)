@@ -1,0 +1,16 @@
+def solution(l, r):
+    answer = []
+    for i in range(l, r+1):
+        s = str(i)
+        for n in range(len(s)):
+            find = 0
+            if s[n] != '5' and s[n] != '0':
+                find = 1
+                break
+        if find == 0:
+            answer.append(i)
+    if answer != []:
+        answer.sort()
+    else:
+        answer.append(-1)
+    return answer

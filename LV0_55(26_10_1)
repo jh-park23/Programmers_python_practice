@@ -1,0 +1,4 @@
+def solution(number):
+    answer = sum(int(c) for c in number)
+    answer %= 9
+    return answer

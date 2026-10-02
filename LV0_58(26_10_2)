@@ -1,0 +1,8 @@
+def solution(my_strings, parts):
+    answer = ''
+    for i in range(len(my_strings)):
+        start = int(parts[i][0])
+        end = int(parts[i][1])
+        temp = my_strings[i][start:end+1]
+        answer += temp
+    return answer

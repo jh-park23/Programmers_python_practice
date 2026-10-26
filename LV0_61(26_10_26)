@@ -1,0 +1,11 @@
+def solution(my_string, is_suffix):
+    answer = 0
+    find = []
+    length = len(my_string)
+    for i in range(0,length):
+        temp =''
+        temp = my_string[i:length]
+        find.append(temp)
+    if is_suffix in find:
+        answer = 1
+    return answer
